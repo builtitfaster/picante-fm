@@ -1,0 +1,93 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="About" description="Learn more about PICANTE — the project, the sound, the mission.">
+  <section class="about-hero">
+    <h1 class="page-title">About</h1>
+  </section>
+
+  <section class="about-content">
+    <div class="bio">
+      <p>
+        <strong class="gradient-text">PICANTE FM</strong> is a weekly radio
+        show by <strong class="gradient-text">PICANTE</strong>, recorded in
+        Highland Park, Los Angeles.
+      </p>
+      <p>
+        House, techno, bass music, UKG, broken beat, Afro-Latin — really
+        whatever's hitting at the moment. We do a guest mix every month too.
+      </p>
+    </div>
+
+    <div class="links-section">
+      <h2 class="section-label">Find PICANTE</h2>
+      <ul class="social-links">
+        <li><a href="https://www.mixcloud.com/picante_fm/" target="_blank" rel="noopener">Mixcloud</a></li>
+      </ul>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .about-hero {
+    padding: 4rem 0 2rem;
+  }
+
+  .page-title {
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+  }
+
+  .about-content {
+    padding: 2rem 0 4rem;
+  }
+
+  .bio {
+    max-width: 600px;
+  }
+
+  .bio p {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: var(--color-text-muted);
+    margin-bottom: 1.5rem;
+  }
+
+  .bio strong {
+    font-weight: 700;
+  }
+
+  .links-section {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #222;
+  }
+
+  .section-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    margin-bottom: 1rem;
+  }
+
+  .social-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .social-links a {
+    color: var(--color-primary);
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.2s;
+  }
+
+  .social-links a:hover {
+    color: var(--color-secondary);
+  }
+</style>

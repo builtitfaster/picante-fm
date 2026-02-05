@@ -1,0 +1,138 @@
+:root {
+  --color-bg: #0a0a0a;
+  --color-surface: #141414;
+  --color-text: #f5f5f5;
+  --color-text-muted: #888;
+  --color-primary: #ff3c00;
+  --color-secondary: #ff8a00;
+  --color-accent: #ffe100;
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'Space Grotesk', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ---- NAV ---- */
+.site-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--color-bg);
+  border-bottom: 2px solid var(--color-primary);
+}
+
+.site-nav .logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary), var(--color-accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: opacity 0.2s;
+}
+
+.site-nav .logo:hover {
+  opacity: 0.8;
+}
+
+.site-nav .nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.site-nav .nav-links a {
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  transition: color 0.2s;
+}
+
+.site-nav .nav-links a:hover,
+.site-nav .nav-links a[aria-current="page"] {
+  color: var(--color-text);
+}
+
+/* ---- MAIN ---- */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* ---- FOOTER ---- */
+.site-footer {
+  text-align: center;
+  padding: 3rem 2rem;
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+}
+
+.site-footer a {
+  color: var(--color-primary);
+  transition: color 0.2s;
+}
+
+.site-footer a:hover {
+  color: var(--color-secondary);
+}
+
+/* ---- UTILITIES ---- */
+.gradient-text {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary), var(--color-accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 600px) {
+  .site-nav {
+    padding: 1rem 1.25rem;
+  }
+
+  .site-nav .nav-links {
+    gap: 1.25rem;
+  }
+
+  main {
+    padding: 0 1.25rem;
+  }
+}
